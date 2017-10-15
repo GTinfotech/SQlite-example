@@ -1,8 +1,26 @@
 <resources>
     <string name="app_name">SQlite-example</string>
 
+    <!--Navigation Drawer String-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!--Common String-->
     <string name="action_settings">Settings</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+
+    <!--Navigation Menu String-->
+    <string name="addcategory">Add Category</string>
+    <string name="addcontact">Add Contact</string>
+    <string name="contactlist">Contact List</string>
+
+
+    <!--Error-->
+    <string name="err_enter_category">Please enter Category</string>
+    <string name="category_not">Category not available</string>
+
+    <!--Add Category Screen String-->
+    <string name="add_category_hint">Enter Category Name</string>
+
 </resources>
