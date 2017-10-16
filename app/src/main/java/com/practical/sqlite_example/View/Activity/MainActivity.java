@@ -1,5 +1,6 @@
 package com.practical.sqlite_example.View.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -19,8 +20,9 @@ import com.practical.sqlite_example.R;
 import com.practical.sqlite_example.View.Fragment.AddCategoryFragment;
 import com.practical.sqlite_example.View.Fragment.AddContactFragment;
 import com.practical.sqlite_example.View.Fragment.ContactListFragment;
+import com.practical.sqlite_example.permission.MultiplePermissionCallback;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -123,5 +125,11 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        imageSelectUtils.onActivityResult(requestCode, resultCode, data);
     }
 }

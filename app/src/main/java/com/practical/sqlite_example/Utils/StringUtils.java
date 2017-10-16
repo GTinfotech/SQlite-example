@@ -46,7 +46,7 @@ public class StringUtils {
     }
 
     public static boolean isValidMobile(String mEditText) {
-        String mobile =mEditText;
+        String mobile = mEditText;
         int length = mobile.length();
         if (length > 7 && length < 14)
             return true;

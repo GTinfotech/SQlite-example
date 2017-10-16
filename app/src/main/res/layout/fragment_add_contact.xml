@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:fillViewport="true"
+        android:fadingEdge="none"
+        custom:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_margin="@dimen/contact_common_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/contact_common_margin"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewProfPicDriver"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/ic_launcher_round"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewProfPicDriver"
+                    android:layout_marginTop="@dimen/contact_common_margin"
+                    android:textColor="@color/black">
+
+                    <EditText
+                        android:id="@+id/editTextName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name_hint"
+                        android:inputType="text|textCapWords"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/contact_common_margin"
+                        android:paddingTop="@dimen/contact_common_margin"
+                        android:textColor="@color/black"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInputName"
+                    android:layout_marginTop="@dimen/contact_common_margin"
+                    android:textColor="@color/black">
+
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_hint"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/contact_common_margin"
+                        android:paddingTop="@dimen/contact_common_margin"
+                        android:textColor="@color/black"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInputNumber"
+                    android:layout_marginTop="@dimen/contact_common_margin"
+                    android:textColor="@color/black">
+
+                    <EditText
+                        android:id="@+id/editTextAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/age_hint"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/contact_common_margin"
+                        android:paddingTop="@dimen/contact_common_margin"
+                        android:textColor="@color/black"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInputAge"
+                    android:layout_marginTop="@dimen/contact_common_margin"
+                    android:textColor="@color/black">
+
+                    <EditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email_hint"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/contact_common_margin"
+                        android:paddingTop="@dimen/contact_common_margin"
+                        android:textColor="@color/black"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/contact_common_padding"
+                    android:layout_below="@id/textInputEmail">
+                </Spinner>
+
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:layout_below="@id/spinnerCategory"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/contact_common_margin"
+                    android:textColor="@color/black" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/buttonSave"
+                    android:layout_height="@dimen/contact_common_margin"></LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

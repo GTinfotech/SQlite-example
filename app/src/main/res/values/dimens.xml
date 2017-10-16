@@ -17,4 +17,9 @@
     <!--Add Category Margins-->
     <dimen name="category_common_margin">10dp</dimen>
     <dimen name="category_edit_padding">5dp</dimen>
+
+    <!--Add Contact Margins-->
+    <dimen name="contact_common_margin">10dp</dimen>
+    <dimen name="image_size">50dp</dimen>
+    <dimen name="contact_common_padding">5dp</dimen>
 </resources>

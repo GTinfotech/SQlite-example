@@ -29,7 +29,7 @@ import java.util.ArrayList;
  * Created by Jay on 10/15/2017.
  */
 
-public class AddCategoryFragment extends Fragment implements View.OnClickListener {
+public class AddCategoryFragment extends BaseFragment implements View.OnClickListener {
 
     View rootView;
     Button buttonSave;
@@ -60,7 +60,7 @@ public class AddCategoryFragment extends Fragment implements View.OnClickListene
 
         rootView = inflater.inflate(R.layout.fragment_add_category, container, false);
 
-        db = new ContactDatabaseHelper(getActivity());
+        db = new ContactDatabaseHelper(getParentActivity());
         keyboardUtils = new KeyboardUtils();
         ut = new utils();
 
@@ -79,13 +79,13 @@ public class AddCategoryFragment extends Fragment implements View.OnClickListene
         editTextCategory = (EditText) rootView.findViewById(R.id.editTextCategory);
         textViewNoCategory = (TextView) rootView.findViewById(R.id.textViewNoCategory);
 
-        keyboardUtils.hideKeyboard(getActivity());
+        keyboardUtils.hideKeyboard(getParentActivity());
 
         //initialize recycleview
         recyclerViewCategory = (RecyclerView) rootView.findViewById(R.id.recyclerViewCategory);
         recyclerViewCategory.setHasFixedSize(true);
 
-        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager = new LinearLayoutManager(getParentActivity());
         recyclerViewCategory.setLayoutManager(layoutManager);
         recyclerViewCategory.setItemAnimator(new DefaultItemAnimator());
 
@@ -215,7 +215,7 @@ public class AddCategoryFragment extends Fragment implements View.OnClickListene
      */
     public void requestFocus(View view) {
         if (view.requestFocus()) {
-            getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+            getParentActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
 
